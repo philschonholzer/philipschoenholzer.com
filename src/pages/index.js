@@ -99,7 +99,7 @@ const CopySection = styled(Section)`
 `
 const ContactSection = styled(Section)`
   font-size: 1.2em;
-  padding-bottom: 6em;
+  padding-bottom: 5em;
 
   @media (min-width: 640px) {
     font-size: 2em;

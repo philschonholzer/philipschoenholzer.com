@@ -90,7 +90,7 @@ const CalendlyButton = styled.div`
 `
 const SocialSection = styled(Section)`
   font-size: 1.9em;
-  padding: 1em 0 1.6em;
+  padding: 0.6em 0 1em;
 
   @media (min-width: 640px) {
     font-size: 3em;
@@ -99,7 +99,7 @@ const SocialSection = styled(Section)`
 const SocialLinks = styled(IconList)`
   .visually-hidden {
     display: block;
-    font-size: 4px;
+    font-size: 6px;
     visibility: hidden;
   }
   & > * {
