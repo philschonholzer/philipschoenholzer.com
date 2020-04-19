@@ -1,22 +1,12 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
 import styled from 'styled-components'
-import {
-  FaTwitter,
-  FaLinkedin,
-  FaXbox,
-  FaInstagram,
-  FaFacebookSquare,
-  FaReddit,
-  FaSkype,
-  FaHome,
-  FaHeart,
-} from 'react-icons/fa'
+import { FaHome, FaHeart } from 'react-icons/fa'
 import { MdWork } from 'react-icons/md'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { Container, Section } from '../styles'
+import { Container, Section, IconList } from '../styles'
 
 const IndexPage = () => {
   return (
@@ -57,7 +47,7 @@ const IndexPage = () => {
             "guilty pleasure".
           </p>
         </CopySection>
-        <Section>
+        <ContactSection>
           <ContactLinks>
             <div css="margin: 0.5em !important;">
               <FaHeart />
@@ -72,39 +62,7 @@ const IndexPage = () => {
               Apptiva
             </a>
           </ContactLinks>
-        </Section>
-        <SocialSection>
-          <SocialLinks>
-            <a href="https://twitter.com/pschonholzer">
-              <FaTwitter />
-              <span class="visually-hidden">Twitter</span>
-            </a>
-            <a href="https://www.linkedin.com/in/philip-schoenholzer/">
-              <FaLinkedin />
-              <span class="visually-hidden">LinkedIn</span>
-            </a>
-            <a href="https://join.skype.com/invite/bBtv050ZE58m">
-              <FaSkype />
-              <span class="visually-hidden">Skype</span>
-            </a>
-            <a href="https://www.reddit.com/user/phischer_h">
-              <FaReddit />
-              <span class="visually-hidden">Reddit</span>
-            </a>
-            <a href="http://live.xbox.com/Profile?Gamertag=CookieJus">
-              <FaXbox />
-              <span class="visually-hidden">Xbox</span>
-            </a>
-            <a href="https://www.instagram.com/phil_sch/">
-              <FaInstagram />
-              <span class="visually-hidden">Instagram</span>
-            </a>
-            <a href="https://www.facebook.com/philip.schoenholzer">
-              <FaFacebookSquare />
-              <span class="visually-hidden">Facebook</span>
-            </a>
-          </SocialLinks>
-        </SocialSection>
+        </ContactSection>
       </Container>
     </Layout>
   )
@@ -139,27 +97,15 @@ const CopySection = styled(Section)`
     font-size: 1.6em;
   }
 `
-const SocialSection = styled(Section)`
-  font-size: 2em;
+const ContactSection = styled(Section)`
+  font-size: 1.2em;
+  padding-bottom: 6em;
 
   @media (min-width: 640px) {
-    font-size: 3em;
-  }
-`
-const IconList = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 -0.5rem;
-  color: hsl(0, 0%, 50%);
-  text-align: center;
-  a {
-    color: inherit;
-    text-decoration: underline;
+    font-size: 2em;
   }
 `
 const ContactLinks = styled(IconList)`
-  font-size: 1.2em;
   font-weight: bold;
   color: ${p => p.theme.primaryLight};
 
@@ -168,8 +114,6 @@ const ContactLinks = styled(IconList)`
   }
 
   @media (min-width: 640px) {
-    font-size: 2em;
-
     & > * {
       margin: 0.5em 1.5em;
     }
@@ -181,15 +125,5 @@ const ContactLinks = styled(IconList)`
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 0.2em;
-  }
-`
-const SocialLinks = styled(IconList)`
-  .visually-hidden {
-    display: block;
-    font-size: 0.5rem;
-    visibility: hidden;
-  }
-  & > * {
-    margin: 0.15em 0.3em -0.2em 0.3em;
   }
 `
