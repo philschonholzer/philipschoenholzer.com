@@ -20,4 +20,5 @@ const HeaderStyle = styled.header`
   top: 0;
   padding: 1em 0;
   background: ${p => p.theme.primary};
+  z-index: 1;
 `
