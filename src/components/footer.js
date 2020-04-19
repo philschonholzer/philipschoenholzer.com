@@ -20,31 +20,31 @@ const Footer = () => {
           <SocialLinks>
             <a href="https://twitter.com/pschonholzer">
               <FaTwitter />
-              <span class="visually-hidden">Twitter</span>
+              <span className="visually-hidden">Twitter</span>
             </a>
             <a href="https://www.linkedin.com/in/philip-schoenholzer/">
               <FaLinkedin />
-              <span class="visually-hidden">LinkedIn</span>
+              <span className="visually-hidden">LinkedIn</span>
             </a>
             <a href="https://join.skype.com/invite/bBtv050ZE58m">
               <FaSkype />
-              <span class="visually-hidden">Skype</span>
+              <span className="visually-hidden">Skype</span>
             </a>
             <a href="https://www.reddit.com/user/phischer_h">
               <FaReddit />
-              <span class="visually-hidden">Reddit</span>
+              <span className="visually-hidden">Reddit</span>
             </a>
             <a href="http://live.xbox.com/Profile?Gamertag=CookieJus">
               <FaXbox />
-              <span class="visually-hidden">Xbox</span>
+              <span className="visually-hidden">Xbox</span>
             </a>
             <a href="https://www.instagram.com/phil_sch/">
               <FaInstagram />
-              <span class="visually-hidden">Instagram</span>
+              <span className="visually-hidden">Instagram</span>
             </a>
             <a href="https://www.facebook.com/philip.schoenholzer">
               <FaFacebookSquare />
-              <span class="visually-hidden">Facebook</span>
+              <span className="visually-hidden">Facebook</span>
             </a>
           </SocialLinks>
         </SocialSection>
@@ -66,7 +66,7 @@ export default Footer
 
 const FooterStyle = styled.footer`
   padding: 1em 0;
-  background: hsl(0, 0%, 30%);
+  background: ${p => p.theme.backgroundLight};
 `
 const Row = styled.div`
   display: flex;
@@ -91,6 +91,7 @@ const CalendlyButton = styled.div`
 const SocialSection = styled(Section)`
   font-size: 1.9em;
   padding: 0.6em 0 1em;
+  color: ${p => p.theme.textDark};
 
   @media (min-width: 640px) {
     font-size: 3em;
