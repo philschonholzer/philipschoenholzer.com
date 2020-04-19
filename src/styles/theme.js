@@ -1,6 +1,6 @@
 const theme = {
-  primary: 'hsla(241, 86%, 68%)',
-  primaryLight: 'hsl(241, 100%, 74%)',
+  primary: 'hsla(262, 43%, 43%)',
+  primaryLight: 'hsla(262,43%,68%)',
   background: 'hsl(0, 0%, 20%)',
   text: 'hsl(0,0%,100%)',
 }
