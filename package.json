@@ -1,28 +1,36 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "philipschoenholzer-webpage",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Webpage of Philip Schönholzer",
+  "version": "2.0.0",
+  "author": "Philip Schönholzer",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.20.12",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-offline": "^3.1.2",
     "gatsby-plugin-react-helmet": "^3.2.2",
     "gatsby-plugin-sharp": "^2.5.3",
+    "gatsby-plugin-styled-components": "^3.2.3",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-sharp": "^2.4.3",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-calendly": "0.0.11",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "react-icons": "^3.9.0",
+    "styled-components": "^5.1.0",
+    "styled-normalize": "^8.0.7",
+    "typewriter-effect": "^2.13.0"
   },
   "devDependencies": {
     "prettier": "2.0.4"
   },
   "keywords": [
-    "gatsby"
+    "personal",
+    "webpage"
   ],
   "license": "MIT",
   "scripts": {
@@ -32,13 +40,11 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "update": "npx npm-check-updates -u",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/philschonholzer/philipschoenholzer.com"
   }
 }
