@@ -59,7 +59,7 @@ const IndexPage = () => {
         </CopySection>
         <Section>
           <ContactLinks>
-            <div css="margin-right: 0 !important;">
+            <div css="margin: 0.5em !important;">
               <FaHeart />
               Verheiratet
             </div>
@@ -73,7 +73,7 @@ const IndexPage = () => {
             </a>
           </ContactLinks>
         </Section>
-        <Section>
+        <SocialSection>
           <SocialLinks>
             <a href="https://twitter.com/pschonholzer">
               <FaTwitter />
@@ -97,7 +97,7 @@ const IndexPage = () => {
               <FaFacebookSquare />
             </a>
           </SocialLinks>
-        </Section>
+        </SocialSection>
       </Container>
     </Layout>
   )
@@ -132,6 +132,13 @@ const CopySection = styled(Section)`
     font-size: 1.6em;
   }
 `
+const SocialSection = styled(Section)`
+  font-size: 2em;
+
+  @media (min-width: 640px) {
+    font-size: 3em;
+  }
+`
 const IconList = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -147,31 +154,29 @@ const IconList = styled.div`
 const ContactLinks = styled(IconList)`
   font-size: 1.2em;
   font-weight: bold;
-  padding-bottom: 2em;
+  color: ${p => p.theme.primaryLight};
+
+  & > * {
+    margin: 0.5em 1em;
+  }
 
   @media (min-width: 640px) {
     font-size: 2em;
-  }
 
-  & > * {
-    margin: 0.15em 1em;
+    & > * {
+      margin: 0.5em 1.5em;
+    }
   }
 
   svg {
     display: block;
-    font-size: 3em;
+    font-size: 2.2em;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 0.1em;
+    padding-bottom: 0.2em;
   }
 `
 const SocialLinks = styled(IconList)`
-  font-size: 2em;
-
-  @media (min-width: 640px) {
-    font-size: 3em;
-  }
-
   & > * {
     margin: 0.15em 0.3em;
   }
