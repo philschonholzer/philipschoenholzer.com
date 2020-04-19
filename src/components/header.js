@@ -7,11 +7,7 @@ const Header = ({ siteTitle = '' }) => (
   <HeaderStyle>
     <Container>
       <div>
-        <Link to="/">
-          Philip
-          <br />
-          Schönholzer
-        </Link>
+        <Link to="/">Philip Schönholzer</Link>
       </div>
     </Container>
   </HeaderStyle>
@@ -20,6 +16,8 @@ const Header = ({ siteTitle = '' }) => (
 export default Header
 
 const HeaderStyle = styled.header`
+  position: sticky;
+  top: 0;
   padding: 1em 0;
   background: ${p => p.theme.primary};
 `
