@@ -26,7 +26,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Philip Schönholzer" />
       <Container>
         <Section>
           <Hero>
