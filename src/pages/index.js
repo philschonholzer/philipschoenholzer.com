@@ -1,37 +1,55 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 import { FaHome, FaHeart } from 'react-icons/fa'
 import { MdWork } from 'react-icons/md'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { Container, Section, IconList } from '../styles'
+import { graphql, useStaticQuery } from 'gatsby'
 
 const IndexPage = () => {
+  const avatar = useStaticQuery(graphql`
+    query AvatarQuery {
+      file(relativePath: { eq: "avatar.jpg" }) {
+        childImageSharp {
+          fixed(width: 150, height: 150) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+    }
+  `)
+  console.log('avatar', avatar)
+
   return (
     <Layout>
       <SEO title="Home" />
       <Container>
         <Section>
-          <HeroTitle>
-            Stets auf der Suche
-            <Typewriter
-              options={{
-                strings: [
-                  'nach Einfachheit',
-                  'nach Schönheit',
-                  'nach Klarheit',
-                  'nach Sinnhaftigkeit',
-                  'nach der Zukunft',
-                ],
-                autoStart: true,
-                loop: true,
-                delay: 40,
-                deleteSpeed: 10,
-              }}
-            />
-          </HeroTitle>
+          <Hero>
+            <HeroTitle>
+              Stets auf der Suche&nbsp;&nbsp;&nbsp;
+              <Typewriter
+                options={{
+                  strings: [
+                    'nach Einfachheit',
+                    'nach Schönheit',
+                    'nach Klarheit',
+                    'nach Sinnhaftigkeit',
+                    'nach der Zukunft',
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  delay: 40,
+                  deleteSpeed: 10,
+                }}
+              />
+            </HeroTitle>
+            <Avatar fixed={avatar.file.childImageSharp.fixed} />
+          </Hero>
         </Section>
         <CopySection>
           <p css="padding-top: 0;">
@@ -70,10 +88,18 @@ const IndexPage = () => {
 
 export default IndexPage
 
+const Hero = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2em;
+`
+
 const HeroTitle = styled.h1`
   font-size: 2em;
   line-height: 1.15;
-  margin-bottom: 0;
+  margin: 0 auto 0 0;
   padding: 1em 0;
   color: ${p => p.theme.primaryLight};
 
@@ -87,6 +113,11 @@ const HeroTitle = styled.h1`
       color: ${p => p.theme.primaryLight};
     }
   }
+`
+
+const Avatar = styled(Img)`
+  border: 5px solid hsl(262, 0%, 28%);
+  border-radius: 50%;
 `
 const CopySection = styled(Section)`
   font-size: 1.3em;
