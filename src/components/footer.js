@@ -18,33 +18,47 @@ const Footer = () => {
       <Container>
         <SocialSection>
           <SocialLinks>
-            <a href="https://twitter.com/pschonholzer">
-              <FaTwitter />
-              <span className="visually-hidden">Twitter</span>
+            <a
+              href="https://twitter.com/pschonholzer"
+              aria-label="My Twitter page"
+            >
+              <FaTwitter focusable="false" aria-hidden="true" />
             </a>
-            <a href="https://www.linkedin.com/in/philip-schoenholzer/">
-              <FaLinkedin />
-              <span className="visually-hidden">LinkedIn</span>
+            <a
+              href="https://www.linkedin.com/in/philip-schoenholzer/"
+              aria-label="My LinkedIn page"
+            >
+              <FaLinkedin focusable="false" aria-hidden="true" />
             </a>
-            <a href="https://join.skype.com/invite/bBtv050ZE58m">
-              <FaSkype />
-              <span className="visually-hidden">Skype</span>
+            <a
+              href="https://join.skype.com/invite/bBtv050ZE58m"
+              aria-label="My Skype name"
+            >
+              <FaSkype focusable="false" aria-hidden="true" />
             </a>
-            <a href="https://www.reddit.com/user/phischer_h">
-              <FaReddit />
-              <span className="visually-hidden">Reddit</span>
+            <a
+              href="https://www.reddit.com/user/phischer_h"
+              aria-label="My Reddit profile"
+            >
+              <FaReddit focusable="false" aria-hidden="true" />
             </a>
-            <a href="http://live.xbox.com/Profile?Gamertag=CookieJus">
-              <FaXbox />
-              <span className="visually-hidden">Xbox</span>
+            <a
+              href="http://live.xbox.com/Profile?Gamertag=CookieJus"
+              aria-label="My Xbox gamer tag"
+            >
+              <FaXbox focusable="false" aria-hidden="true" />
             </a>
-            <a href="https://www.instagram.com/phil_sch/">
-              <FaInstagram />
-              <span className="visually-hidden">Instagram</span>
+            <a
+              href="https://www.instagram.com/phil_sch/"
+              aria-label="My Instagram page"
+            >
+              <FaInstagram focusable="false" aria-hidden="true" />
             </a>
-            <a href="https://www.facebook.com/philip.schoenholzer">
-              <FaFacebookSquare />
-              <span className="visually-hidden">Facebook</span>
+            <a
+              href="https://www.facebook.com/philip.schoenholzer"
+              aria-label="My Facebook page"
+            >
+              <FaFacebookSquare focusable="false" aria-hidden="true" />
             </a>
           </SocialLinks>
         </SocialSection>
@@ -98,12 +112,7 @@ const SocialSection = styled(Section)`
   }
 `
 const SocialLinks = styled(IconList)`
-  .visually-hidden {
-    display: block;
-    font-size: 6px;
-    visibility: hidden;
-  }
   & > * {
-    margin: 0.15em 0.3em -0.2em 0.3em;
+    margin: 0.15em 0.3em 0.15em 0.3em;
   }
 `
