@@ -6,6 +6,7 @@
   "author": "Philip Schönholzer",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
+    "fs-extra": "^9.0.1",
     "gatsby": "^2.20.12",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-manifest": "^2.3.3",
@@ -16,9 +17,12 @@
     "gatsby-plugin-styled-components": "^3.2.3",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-sharp": "^2.4.3",
+    "isomorphic-unfetch": "^3.0.0",
+    "node-fetch": "^2.6.0",
     "preact": "^10.4.5",
     "preact-render-to-string": "^5.1.9",
     "prop-types": "^15.7.2",
+    "ramda": "^0.27.0",
     "react": "^16.12.0",
     "react-calendly": "0.0.11",
     "react-dom": "^16.12.0",
@@ -26,7 +30,8 @@
     "react-icons": "^3.9.0",
     "styled-components": "^5.1.0",
     "styled-normalize": "^8.0.7",
-    "typewriter-effect": "^2.13.0"
+    "typewriter-effect": "^2.13.0",
+    "unfetch": "^4.1.0"
   },
   "devDependencies": {
     "prettier": "2.0.4"
@@ -43,6 +48,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "fetchDrupalAssets": "node ./scripts/fetch-drupal-assets.mjs",
     "update": "npx npm-check-updates -u",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
