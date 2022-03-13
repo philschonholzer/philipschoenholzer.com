@@ -1,4 +1,5 @@
 ---
+import '../styles/global.scss'
 export interface Props {
   title: string
   description: string
@@ -20,7 +21,6 @@ const { title, description, image, next, prev, canonicalURL } =
 />
 <title>{title}</title>
 <meta name="description" content={description} />
-<link rel="stylesheet" href="/styles/global.css" />
 
 <!-- Favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
