@@ -8,7 +8,12 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
     // ...
     '@astrojs/renderer-react',
   ],
-  vite: { plugins: [imagetools()] },
+  vite: {
+    plugins: [imagetools()],
+    ssr: {
+      external: ['svgo'],
+    },
+  },
   buildOptions: {
     sitemap: true,
     site: 'https://philipschoenholzer.com/',
