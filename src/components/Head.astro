@@ -6,11 +6,12 @@ export interface Props {
   image?: string
   next?: string
   prev?: string
-  canonicalURL?: string
 }
 
-const { title, description, image, next, prev, canonicalURL } =
+const { title, description, image, next, prev } =
   Astro.props as Props
+
+const canonicalURL = Astro.canonicalURL
 ---
 
 <!-- Common -->
@@ -43,7 +44,7 @@ const { title, description, image, next, prev, canonicalURL } =
 
 <!-- Twitter -->
 <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
-<meta name="twitter:site" content="@astro" />
+<meta name="twitter:site" content="@pschonholzer" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 {image && (<meta name="twitter:image" content={image}>)}

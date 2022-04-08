@@ -9,16 +9,15 @@ interface Props {
   image?: string
   next?: string
   prev?: string
-  canonicalURL?: string
 }
 
-const { title, description, image, next, prev, canonicalURL } =
+const { title, description, image, next, prev } =
   Astro.props as Props
 ---
 
 <html lang="de">
   <head>
-    <Head {title} {description} {image} {next} {prev} {canonicalURL} />
+    <Head {title} {description} {image} {next} {prev} />
   </head>
 
   <body>
