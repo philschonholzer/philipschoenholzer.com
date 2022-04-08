@@ -1,38 +1,46 @@
 ---
 import { Icon } from 'astro-icon'
-import Image from "astro-imagetools";
-import Layout from '../layouts/Main.astro';
+import Image from 'astro-imagetools'
+import Layout from '../layouts/Main.astro'
 ---
 
-<Layout title="Philip Schönholzer" description="Über Philip Schönholzer" canonicalURL="https://philipschoenholzer.com/">
+<Layout
+  title="Philip Schönholzer"
+  description="Über Philip Schönholzer"
+  canonicalURL="https://philipschoenholzer.com/"
+>
   <div class="container">
     <section class="hero">
       <div>
         <h1>Philip Schönholzer</h1>
-        <p>
-          Stets auf der Suche nach
-          <ul>
-            <li>Einfachheit</li>
-            <li>Schönheit</li>
-            <li>Klarheit</li>
-          </ul>
-        </p>
+        <p>Stets auf der Suche nach...</p>
+        <ul>
+          <li>Einfachheit</li>
+          <li>Schönheit</li>
+          <li>Klarheit</li>
+        </ul>
       </div>
-      <div class="avatar" >
-        <Image src="/src/images/avatar.jpg" width={300} height={300} tint="612f9d" alt="Bild von Philip Schönholzer" />
+      <div class="avatar">
+        <Image
+          src="/src/images/avatar.jpg"
+          width={300}
+          height={300}
+          tint="612f9d"
+          alt="Bild von Philip Schönholzer"
+        />
       </div>
     </section>
     <section class="copy-section">
       <p>
-        Ich bin stets auf der Suche. Ich bin stets am Lernen. Dort hoffe ich
-        die Antworten zu finden. Mich interessieren besonders Geschichte,
+        Ich bin stets auf der Suche. Ich bin stets am Lernen. Dort hoffe ich die
+        Antworten zu finden. Mich interessieren besonders Geschichte,
         Technologie, Minimalismus und Video-Games.
       </p>
       <p>
         Geschichte gibt mir die Möglichkeit zu sehen wo die Reise hingehen
         könnte. Technologie hat immensen Einfluss auf unser aller jetziges und
-        zukünftiges Leben. Minimalismus fordert mich "andere" Ziele im Leben
-        zu haben und Dankbarkeit zu pflegen. Video-Games sind meine "guilty
+        zukünftiges Leben. Minimalismus fordert mich "andere" Ziele im Leben zu
+        haben und Dankbarkeit zu pflegen. Video-Games sind meine "guilty
         pleasure".
       </p>
     </section>
@@ -80,24 +88,24 @@ import Layout from '../layouts/Main.astro';
       }
     }
 
-    p, ul {
+    p,
+    ul {
       font-style: italic;
       color: var(--textDark);
     }
 
     .avatar {
       height: 150px;
-    width: 150px;
+      width: 150px;
       margin-left: auto;
       margin-right: auto;
-    border: 5px solid hsl(262, 0%, 28%);
-    border-radius: 50%;
-    overflow: hidden;
+      border: 5px solid hsl(262, 0%, 28%);
+      border-radius: 50%;
+      overflow: hidden;
     }
-
   }
 
-.copy-section {
+  .copy-section {
     font-size: 1.2em;
     padding-top: 0;
     padding-bottom: 3em;
@@ -108,7 +116,7 @@ import Layout from '../layouts/Main.astro';
   }
 
   .contact-section {
-    font-size: 1.0em;
+    font-size: 1em;
     padding-bottom: 8em;
 
     @media (min-width: 640px) {
