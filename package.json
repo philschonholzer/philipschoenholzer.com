@@ -7,8 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "format": "prettier -w src",
-    "preinstall": "npx -y only-allow pnpm"
+    "format": "prettier -w src"
   },
   "devDependencies": {
     "astro": "^1.0.0-beta.5",
