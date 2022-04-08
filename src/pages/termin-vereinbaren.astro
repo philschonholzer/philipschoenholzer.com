@@ -10,10 +10,10 @@ import Layout from '../layouts/Main.astro'
 >
   <section>
     <div class="container">
-        <a href="/">
-          <Icon name="ph:caret-left-bold" />
-        
-        <h1>Termin vereinbaren</h1></a> 
+      <a href="/">
+        <Icon name="ph:caret-left-bold" />
+        <h1>Termin vereinbaren</h1>
+      </a> 
       <div class="calendly-inline-widget" data-url="https://calendly.com/philip-schoenholzer/30min?hide_event_type_details=1&hide_gdpr_banner=1">
         <div class="placeholder">Lade Kalender...</div>
       </div>
@@ -39,6 +39,7 @@ import Layout from '../layouts/Main.astro'
   a {
     display: flex;
     align-items: center;
+    margin-top: 3em;
   }
   svg {
     height: 2em;
