@@ -1,21 +1,20 @@
+import { defineConfig } from 'astro/config'
+import astroImagePlugin from 'astro-imagetools/plugin'
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
-import { imagetools } from 'vite-imagetools'
 // @ts-check
-export default /** @type {import('astro').AstroUserConfig} */ ({
-  // Comment out "renderers: []" to enable Astro's default component support.
-  renderers: [
-    // ...
-    '@astrojs/renderer-react',
-  ],
-  vite: {
-    plugins: [imagetools()],
-    ssr: {
-      external: ['svgo'],
+
+// https://astro.build/config
+export default defineConfig(
+  /** @type {import('astro').AstroUserConfig} */
+  {
+    vite: {
+      plugins: [astroImagePlugin],
+      ssr: {
+        external: ['svgo'],
+      },
     },
-  },
-  buildOptions: {
-    sitemap: true,
     site: 'https://philipschoenholzer.com/',
-  },
-})
+    integrations: [],
+  }
+)

@@ -1,5 +1,4 @@
 ---
-import { PopupButton } from 'react-calendly'
 import { Icon } from 'astro-icon'
 ---
 
@@ -50,12 +49,27 @@ import { Icon } from 'astro-icon'
     </section>
     <div class="row">
       <p>© 1978 - {new Date().getFullYear()}, Philip Schönholzer</p>
-      <PopupButton
-        client:visible
-        className="calendly-button"
-        text="Termin mit mir vereinbaren"
-        url="https://calendly.com/philip-schoenholzer/30min"
+      <!-- Calendly link widget begin -->
+      <link
+        href="https://assets.calendly.com/assets/external/widget.css"
+        rel="stylesheet"
       />
+      <script
+        src="https://assets.calendly.com/assets/external/widget.js"
+        type="text/javascript"
+        async></script>
+      <script is:inline>
+        function popup() {
+          Calendly.initPopupWidget({
+            url: 'https://calendly.com/philip-schoenholzer/30min',
+          })
+        }
+      </script>
+
+      <a class="calendly-button" href="" onclick="popup();return false;"
+        >Termin mit mir vereinbaren</a
+      >
+      <!-- Calendly link widget end -->
     </div>
   </div>
 </footer>

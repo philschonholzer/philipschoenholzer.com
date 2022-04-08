@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon'
-import avatar from '../images/avatar.jpg?w=300&h=300&tint=613f9d&webp'
+import Image from "astro-imagetools";
 import Layout from '../layouts/Main.astro';
 ---
 
@@ -18,7 +18,9 @@ import Layout from '../layouts/Main.astro';
           </ul>
         </p>
       </div>
-      <img class="avatar" src={avatar} alt="Bild von Philip Schönholzer" />
+      <div class="avatar" >
+        <Image src="/src/images/avatar.jpg" width={300} height={300} tint="612f9d" alt="Bild von Philip Schönholzer" />
+      </div>
     </section>
     <section class="copy-section">
       <p>
@@ -83,21 +85,19 @@ import Layout from '../layouts/Main.astro';
       color: var(--textDark);
     }
 
-    img {
+    .avatar {
+      height: 150px;
+    width: 150px;
       margin-left: auto;
       margin-right: auto;
+    border: 5px solid hsl(262, 0%, 28%);
+    border-radius: 50%;
+    overflow: hidden;
     }
 
   }
 
-  .avatar {
-    height: 150px;
-    width: 150px;
-    border: 5px solid hsl(262, 0%, 28%);
-    border-radius: 50%;
-  }
-
-  .copy-section {
+.copy-section {
     font-size: 1.2em;
     padding-top: 0;
     padding-bottom: 3em;
