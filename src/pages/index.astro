@@ -75,14 +75,13 @@ import Layout from '../layouts/Main.astro'
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 4rem 0;
+    padding-block: 3.5em;
     gap: 1em;
 
     h1 {
       font-size: 2em;
       line-height: 1.15;
       margin: 0 auto 0 0;
-      padding: 1em 0 0;
       color: var(--primaryLight);
 
       @media (min-width: 640px) {
@@ -94,13 +93,14 @@ import Layout from '../layouts/Main.astro'
     ul {
       font-style: italic;
       color: var(--textDark);
+      margin-block-end: 0;
     }
 
     :global(picture) {
       height: 150px;
       width: 150px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-inline: auto;
+      margin-block: 1em;
       border: 5px solid var(--background);
       border-radius: 50%;
       overflow: hidden;
@@ -112,7 +112,6 @@ import Layout from '../layouts/Main.astro'
   .copy-section {
     font-size: 1.2em;
     padding-top: 0;
-    padding-bottom: 3em;
 
     @media (min-width: 640px) {
       font-size: 1.6em;
