@@ -4,17 +4,15 @@ import { Icon } from 'astro-icon'
 import Layout from '../layouts/Main.astro'
 ---
 
-<Layout
-  title="Termin vereinbaren"
-  description="Termin mit Philip Schönholzer vereinbaren"
->
+<Layout title="Termin vereinbaren" description="Termin mit Philip Schönholzer vereinbaren">
   <section>
     <div class="container">
       <a href="/">
         <Icon name="ph:caret-left-bold" />
         <h1>Termin vereinbaren</h1>
-      </a> 
-      <div class="calendly-inline-widget" data-url="https://calendly.com/philip-schoenholzer/30min?hide_event_type_details=1&hide_gdpr_banner=1">
+      </a>
+      <div class="calendly-inline-widget"
+        data-url="https://calendly.com/philip-schoenholzer/30min?hide_event_type_details=1&hide_gdpr_banner=1">
         <div class="placeholder">Lade Kalender...</div>
       </div>
       <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
@@ -25,9 +23,10 @@ import Layout from '../layouts/Main.astro'
 <style>
   .calendly-inline-widget {
     position: relative;
-    min-width:320px;
-    height:730px;
+    min-width: 320px;
+    height: 730px;
   }
+
   .placeholder {
     position: absolute;
     inset: 0;
@@ -36,10 +35,12 @@ import Layout from '../layouts/Main.astro'
     justify-content: center;
     z-index: -1;
   }
+
   a {
     display: flex;
     align-items: center;
   }
+
   svg {
     height: 2em;
   }

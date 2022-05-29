@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config'
-import astroImagePlugin from 'astro-imagetools/plugin'
-// Full Astro Configuration API Documentation:
+import { astroImageTools } from 'astro-imagetools' // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
 // @ts-check
 
@@ -9,12 +8,11 @@ export default defineConfig(
   /** @type {import('astro').AstroUserConfig} */
   {
     vite: {
-      plugins: [astroImagePlugin],
       ssr: {
         external: ['svgo'],
       },
     },
     site: 'https://philipschoenholzer.com/',
-    integrations: [],
+    integrations: [[astroImageTools]],
   }
 )

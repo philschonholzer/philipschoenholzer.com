@@ -1,13 +1,10 @@
 ---
 import { Icon } from 'astro-icon'
-import Image from 'astro-imagetools'
+import { Picture } from "astro-imagetools/components"
 import Layout from '../layouts/Main.astro'
 ---
 
-<Layout
-  title="Philip Schönholzer"
-  description="Über Philip Schönholzer"
->
+<Layout title="Philip Schönholzer" description="Über Philip Schönholzer">
   <div class="container">
     <section class="hero">
       <div>
@@ -19,18 +16,12 @@ import Layout from '../layouts/Main.astro'
           <li>Klarheit</li>
         </ul>
       </div>
-      <Image
-        src="/src/images/avatar.jpg"
-        width={300}
-        height={300}
-        tint="6e3f9d"
-        alt="Bild von Philip Schönholzer"
-      />
+      <Picture src="/src/images/avatar.jpg" width={300} height={300} tint="6e3f9d" alt="Bild von Philip Schönholzer" />
     </section>
     <section class="copy-section">
       <p>
-        Ich bin stets auf der Suche. Ich bin stets am Lernen. Dort hoffe ich die
-        Antworten zu finden. Mich interessieren besonders Geschichte,
+        Ich bin stets auf der Suche. Ich bin stets am Lernen. Dort hoffe ich die Antworten zu finden. Mich interessieren
+        besonders Geschichte,
         Technologie, Minimalismus und Video-Games.
       </p>
       <p>
@@ -142,7 +133,7 @@ import Layout from '../layouts/Main.astro'
       text-decoration: underline;
     }
 
-    & > * {
+    &>* {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -163,6 +154,7 @@ import Layout from '../layouts/Main.astro'
     text-align: center;
 
   }
+
   .calendly-button {
     font-size: 0.8em;
     padding: 0.5em 1.5em;
@@ -171,5 +163,4 @@ import Layout from '../layouts/Main.astro'
     color: var(--text);
     background: transparent;
   }
-
 </style>
