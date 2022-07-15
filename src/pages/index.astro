@@ -1,7 +1,8 @@
 ---
 import { Icon } from 'astro-icon'
-import { Picture } from "astro-imagetools/components"
+import { Picture } from '@astrojs/image'
 import Layout from '../layouts/Main.astro'
+import avatar from '/src/images/avatar.jpg'
 ---
 
 <Layout title="Philip Schönholzer" description="Über Philip Schönholzer">
@@ -16,7 +17,8 @@ import Layout from '../layouts/Main.astro'
           <li>Klarheit</li>
         </ul>
       </div>
-      <Picture src="/src/images/avatar.jpg" width={300} height={300} tint="6e3f9d" alt="Bild von Philip Schönholzer" />
+      <Picture src={avatar} sizes="150px" widths={[150, 300, 450]} alt="Bild von Philip Schönholzer" width="150"
+        height="150" />
     </section>
     <section class="copy-section">
       <p>
@@ -53,7 +55,7 @@ import Layout from '../layouts/Main.astro'
       </div>
 
       <div class="appointment-button-wrapper">
-        <a class="calendly-button" href="/termin-vereinbaren">Termin mit mir vereinbaren</a>
+        <a class="calendly-button" href="/termin-vereinbaren">Termin vereinbaren</a>
       </div>
 
     </section>
@@ -88,8 +90,10 @@ import Layout from '../layouts/Main.astro'
     }
 
     :global(picture) {
-      height: 150px;
+      display: block;
       width: 150px;
+      height: auto;
+
       margin-inline: auto;
       margin-block: 1em;
       border: 5px solid var(--background);
@@ -97,6 +101,12 @@ import Layout from '../layouts/Main.astro'
       overflow: hidden;
       box-shadow: 0 0 0 7px var(--primaryLight);
       transform: translate3d(0, 0, 0);
+
+      :global(img) {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
     }
   }
 

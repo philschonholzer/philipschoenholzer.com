@@ -1,8 +1,7 @@
 import { defineConfig } from 'astro/config'
-import { astroImageTools } from 'astro-imagetools' // Full Astro Configuration API Documentation:
+import image from '@astrojs/image'
 // https://docs.astro.build/reference/configuration-reference
 // @ts-check
-
 // https://astro.build/config
 export default defineConfig(
   /** @type {import('astro').AstroUserConfig} */
@@ -13,6 +12,6 @@ export default defineConfig(
       },
     },
     site: 'https://philipschoenholzer.com/',
-    integrations: [[astroImageTools]],
+    integrations: [image()],
   }
 )
