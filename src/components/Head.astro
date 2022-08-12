@@ -11,7 +11,7 @@ export interface Props {
 const { title, description, image, next, prev } =
   Astro.props as Props
 
-const canonicalURL = Astro.canonicalURL
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!-- Common -->

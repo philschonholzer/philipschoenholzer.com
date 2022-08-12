@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon'
-import { Picture } from '@astrojs/image'
+import { Picture } from '@astrojs/image/components'
 import Layout from '../layouts/Main.astro'
 import avatar from '/src/images/avatar.jpg'
 ---
@@ -17,8 +17,8 @@ import avatar from '/src/images/avatar.jpg'
           <li>Klarheit</li>
         </ul>
       </div>
-      <Picture src={avatar} sizes="150px" widths={[150, 300, 450]} alt="Bild von Philip Schönholzer" width="150"
-        height="150" />
+      <Picture src={avatar} sizes="150px" widths={[150, 300, 450]} alt="Bild von Philip Schönholzer" width={150}
+        height={150} />
     </section>
     <section class="copy-section">
       <p>
