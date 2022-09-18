@@ -3,9 +3,9 @@ import '../styles/global.scss'
 export interface Props {
   title: string
   description: string
-  image?: string
-  next?: string
-  prev?: string
+  image?: string | undefined
+  next?: string | undefined
+  prev?: string | undefined
 }
 
 const { title, description, image, next, prev } = Astro.props as Props

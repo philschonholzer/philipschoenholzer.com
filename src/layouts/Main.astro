@@ -16,7 +16,13 @@ const { title, description, image, next, prev } = Astro.props as Props
 
 <html lang="de">
   <head>
-    <Head {title} {description} {image} {next} {prev} />
+    <Head
+      title={title}
+      description={description}
+      image={image}
+      next={next}
+      prev={prev}
+    />
   </head>
 
   <body>
