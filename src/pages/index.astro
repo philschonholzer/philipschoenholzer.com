@@ -17,13 +17,20 @@ import avatar from '/src/images/avatar.jpg'
           <li>Klarheit</li>
         </ul>
       </div>
-      <Picture src={avatar} sizes="150px" widths={[150, 300, 450]} alt="Bild von Philip Schönholzer" width={150}
-        height={150} />
+      <Picture
+        src={avatar}
+        sizes="150px"
+        widths={[150, 300, 450]}
+        alt="Bild von Philip Schönholzer"
+        width={150}
+        height={150}
+      />
     </section>
     <section class="copy-section">
       <p>
-        Ich bin stets auf der Suche. Ich bin stets am Lernen. Dort hoffe ich die Antworten zu finden. Mich interessieren
-        besonders Geschichte, Technologie, Minimalismus und Video-Games.
+        Ich bin stets auf der Suche. Ich bin stets am Lernen. Dort hoffe ich die
+        Antworten zu finden. Mich interessieren besonders Geschichte,
+        Technologie, Minimalismus und Video-Games.
       </p>
     </section>
     <section class="contact-section">
@@ -47,9 +54,10 @@ import avatar from '/src/images/avatar.jpg'
       </div>
 
       <div class="appointment-button-wrapper">
-        <a class="calendly-button" href="/termin-vereinbaren">Termin vereinbaren</a>
+        <a class="calendly-button" href="/termin-vereinbaren"
+          >Termin vereinbaren
+        </a>
       </div>
-
     </section>
   </div>
 </Layout>
@@ -134,7 +142,7 @@ import avatar from '/src/images/avatar.jpg'
       text-decoration: underline;
     }
 
-    &>* {
+    & > * {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -153,7 +161,6 @@ import avatar from '/src/images/avatar.jpg'
   .appointment-button-wrapper {
     margin-top: 4em;
     text-align: center;
-
   }
 
   .calendly-button {

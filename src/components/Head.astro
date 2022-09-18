@@ -8,10 +8,9 @@ export interface Props {
   prev?: string
 }
 
-const { title, description, image, next, prev } =
-  Astro.props as Props
+const { title, description, image, next, prev } = Astro.props as Props
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 ---
 
 <!-- Common -->
@@ -34,17 +33,33 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 <!-- SEO -->
 <link rel="canonical" href={canonicalURL} />
-{next && <link rel="next" aria-label="Previous Page" href={new URL(next, canonicalURL).href}>}
-{prev && <link rel="prev" aria-label="Next Page" href={new URL(prev, canonicalURL).href}>}
+{
+  next && (
+    <link
+      rel="next"
+      aria-label="Previous Page"
+      href={new URL(next, canonicalURL).href}
+    />
+  )
+}
+{
+  prev && (
+    <link
+      rel="prev"
+      aria-label="Next Page"
+      href={new URL(prev, canonicalURL).href}
+    />
+  )
+}
 
 <!-- OpenGraph -->
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-{image && (<meta property="og:image" content={new URL(image, canonicalURL)}>)}
+{image && <meta property="og:image" content={new URL(image, canonicalURL)} />}
 
 <!-- Twitter -->
 <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
 <meta name="twitter:site" content="@pschonholzer" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-{image && (<meta name="twitter:image" content={image}>)}
+{image && <meta name="twitter:image" content={image} />}
