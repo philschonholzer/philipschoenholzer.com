@@ -12,6 +12,10 @@ export default defineConfig(
       },
     },
     site: 'https://philipschoenholzer.com/',
-    integrations: [image()],
+    integrations: [
+      image({
+        serviceEntryPoint: '@astrojs/image/sharp',
+      }),
+    ],
   }
 )
