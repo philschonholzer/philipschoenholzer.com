@@ -6,14 +6,14 @@ import { Icon } from 'astro-icon'
   <div class="container">
     <section class="social-section">
       <div class="social-links">
-        <a href="https://twitter.com/pschonholzer" aria-label="My Twitter page">
-          <Icon name="ph:twitter-logo-bold" />
-        </a>
         <a
           href="https://www.linkedin.com/in/philip-schoenholzer/"
           aria-label="My LinkedIn page"
         >
           <Icon name="ph:linkedin-logo-bold" />
+        </a>
+        <a href="https://mastodon.world/@phisch" aria-label="My Mastodon page">
+          <Icon name="mdi:mastodon" />
         </a>
         <a
           href="https://join.skype.com/invite/bBtv050ZE58m"
@@ -44,6 +44,9 @@ import { Icon } from 'astro-icon'
           aria-label="My Facebook page"
         >
           <Icon name="ph:facebook-logo-bold" />
+        </a>
+        <a href="https://twitter.com/pschonholzer" aria-label="My Twitter page">
+          <Icon name="ph:twitter-logo-bold" />
         </a>
       </div>
     </section>
@@ -81,14 +84,14 @@ import { Icon } from 'astro-icon'
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 1em;
+    gap: 0.4em 1em;
 
     a {
       color: var(--textDark);
     }
 
     svg {
-      height: 1.5em;
+      height: 1.3em;
       fill: currentColor;
     }
   }
