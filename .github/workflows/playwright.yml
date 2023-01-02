@@ -1,11 +1,9 @@
 name: Playwright Tests
-on:
-  deployment_status:
+on: [pull_request, push]
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    if: github.event.deployment_status.state == 'success'
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -15,8 +13,14 @@ jobs:
         run: pnpm install
       - name: Install Playwright
         run: pnpm dlx playwright install --with-deps
+      - name: Waiting for 200 from the Netlify Preview
+        uses: jakepartusch/wait-for-netlify-action@v1.4
+        id: waitFor200
+        with:
+          site_name: 'philipschoenholzer-com'
+          max_timeout: 360 # 6 Minutes, depends on your build pipeline duration
       - name: Run Playwright tests
         run: pnpm dlx playwright test
         env:
           # This might depend on your test-runner/language binding
-          PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}
+          PLAYWRIGHT_TEST_BASE_URL: ${{ steps.waitFor200.outputs.url }}
