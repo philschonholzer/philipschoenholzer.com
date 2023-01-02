@@ -34,3 +34,19 @@ const { title, description, image, next, prev } = Astro.props as Props
     <Footer />
   </body>
 </html>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    font-family: sans-serif;
+    color: var(--text);
+    background: var(--background);
+  }
+  main {
+    display: block;
+    flex: 1;
+  }
+</style>
