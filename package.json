@@ -7,8 +7,9 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
+    "preview:host": "astro preview --host",
     "test": "playwright test",
-    "test:ci": "pnpm preview && pnpm dlx playwright test",
+    "test:ci": "start-server-and-test preview:host http://localhost:3000 test",
     "format": "prettier -w src"
   },
   "devDependencies": {
@@ -20,6 +21,7 @@
     "prettier-plugin-astro": "0.7.0",
     "sass": "^1.57.1",
     "sharp": "^0.31.3",
+    "start-server-and-test": "^1.15.3",
     "svgo": "2.8.0"
   }
 }
