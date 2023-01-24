@@ -7,7 +7,7 @@ test('homepage has title and links to appointment page', async ({
   await page.goto('/')
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Philip Schonholzer/)
+  await expect(page).toHaveTitle(/Philip Schönholzer/)
 
   // create a locator
   const pageHeading = page.getByRole('heading', { name: 'Philip Schönholzer' })
