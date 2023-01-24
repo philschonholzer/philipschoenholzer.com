@@ -6,6 +6,7 @@ specifiers:
   astro: 1.6.15
   astro-icon: ^0.8.0
   netlify-plugin-playwright-cache: ^0.0.1
+  playwright-chromium: ^1.29.2
   prettier-plugin-astro: 0.7.0
   sass: ^1.57.1
   sharp: ^0.31.3
@@ -17,6 +18,7 @@ devDependencies:
   astro: 1.6.15_sass@1.57.1
   astro-icon: 0.8.0
   netlify-plugin-playwright-cache: 0.0.1
+  playwright-chromium: 1.29.2
   prettier-plugin-astro: 0.7.0
   sass: 1.57.1
   sharp: 0.31.3
@@ -2813,6 +2815,15 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: 4.1.0
+    dev: true
+
+  /playwright-chromium/1.29.2:
+    resolution: {integrity: sha512-iylIZpI8pD2ukBY5fQhluCx530bi2w4oUUM0PAfsxBnAYKntdj4bkTlcHuvS23EvabUS++YYi6KCI5uC517nxQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      playwright-core: 1.29.2
     dev: true
 
   /playwright-core/1.29.2:
