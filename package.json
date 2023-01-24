@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "test": "playwright test",
-    "test:ci": "pnpm dlx playwright install chrome firefox && pnpm dlx playwright test",
+    "test:ci": "pnpm preview && pnpm dlx playwright test",
     "format": "prettier -w src"
   },
   "devDependencies": {
