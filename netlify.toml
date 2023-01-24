@@ -1,3 +1,6 @@
 [build]
   command = "pnpm build && pnpm test:ci"
   publish = "dist"
+
+[[plugins]]
+  package = "netlify-plugin-playwright-cache"

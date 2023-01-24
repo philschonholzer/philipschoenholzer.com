@@ -5,6 +5,7 @@ specifiers:
   '@playwright/test': ^1.29.2
   astro: 1.6.15
   astro-icon: ^0.8.0
+  netlify-plugin-playwright-cache: ^0.0.1
   prettier-plugin-astro: 0.7.0
   sass: ^1.57.1
   sharp: ^0.31.3
@@ -15,6 +16,7 @@ devDependencies:
   '@playwright/test': 1.29.2
   astro: 1.6.15_sass@1.57.1
   astro-icon: 0.8.0
+  netlify-plugin-playwright-cache: 0.0.1
   prettier-plugin-astro: 0.7.0
   sass: 1.57.1
   sharp: 0.31.3
@@ -2599,6 +2601,10 @@ packages:
 
   /napi-build-utils/1.0.2:
     resolution: {integrity: sha512-ONmRUqK7zj7DWX0D9ADe03wbwOBZxNAfF20PlGfCWQcD3+/MakShIHrMqx9YwPTfxDdF1zLeL+RGZiR9kGMLdg==}
+    dev: true
+
+  /netlify-plugin-playwright-cache/0.0.1:
+    resolution: {integrity: sha512-FECC4DtoYKpGGUNevxXVTE0GdD5LYSWwTPJpHv/WW4VlviTle8QlKBvF3Exfm48TDvZCUR3ofX1Zz+cJWOWBWA==}
     dev: true
 
   /nlcst-to-string/3.1.1:

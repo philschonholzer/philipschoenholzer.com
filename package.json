@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "test": "playwright test",
-    "test:ci": "pnpm dlx playwright install --with-deps && pnpm dlx playwright test",
+    "test:ci": "pnpm dlx playwright install && pnpm dlx playwright test",
     "format": "prettier -w src"
   },
   "devDependencies": {
@@ -16,6 +16,7 @@
     "@playwright/test": "^1.29.2",
     "astro": "1.6.15",
     "astro-icon": "^0.8.0",
+    "netlify-plugin-playwright-cache": "^0.0.1",
     "prettier-plugin-astro": "0.7.0",
     "sass": "^1.57.1",
     "sharp": "^0.31.3",
