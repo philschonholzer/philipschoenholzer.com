@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "preview:host": "astro preview --host",
     "test": "playwright test",
-    "test:ci": "echo $DEPLOY_URL && curl $DEPLOY_URL && npm run test",
+    "test:ci": "start-server-and-test preview:host http://localhost:3000 test",
     "format": "prettier -w src"
   },
   "devDependencies": {
