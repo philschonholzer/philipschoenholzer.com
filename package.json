@@ -8,9 +8,11 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "preview:host": "astro preview --host",
-    "test": "playwright test",
+    "test": "node node_modules/@playwright/test/cli.js test",
     "test:ci": "start-server-and-test preview:host http://localhost:4322 test",
-    "format": "prettier -w src"
+    "format": "biome check --write .",
+    "lint": "biome lint .",
+    "check": "biome check ."
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.13",
@@ -23,7 +25,6 @@
     "astro": "5.17.1",
     "astro-icon": "^1.1.5",
     "netlify-plugin-playwright-cache": "^0.0.1",
-    "prettier-plugin-astro": "0.14.1",
     "sass": "^1.97.3",
     "sharp": "^0.31.3",
     "start-server-and-test": "^1.15.4",

@@ -13,5 +13,5 @@ export default defineConfig(
     },
     site: 'https://philipschoenholzer.com/',
     integrations: [icon()],
-  }
+  },
 )
