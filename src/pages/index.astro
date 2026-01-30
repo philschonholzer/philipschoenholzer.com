@@ -1,6 +1,6 @@
 ---
-import { Icon } from 'astro-icon'
-import { Picture } from '@astrojs/image/components'
+import { Icon } from 'astro-icon/components'
+import { Picture } from 'astro:assets'
 import Layout from '../layouts/Main.astro'
 import avatar from '/src/images/avatar.jpg'
 ---
@@ -150,6 +150,7 @@ import avatar from '/src/images/avatar.jpg'
 
       svg {
         height: 3em;
+        width: 3em;
         display: block;
         margin: auto;
         fill: currentColor;

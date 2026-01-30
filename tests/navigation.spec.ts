@@ -13,7 +13,7 @@ test('homepage has title and links to appointment page', async ({
   const pageHeading = page.getByRole('heading', { name: 'Philip Schönholzer' })
 
   // Expect an attribute "to be strictly equal" to the value.
-  await expect(pageHeading).toBeDefined()
+  expect(pageHeading).toBeDefined()
 
   // Click the get started link.
   await page.getByRole('link', { name: 'Termin vereinbaren' }).click()

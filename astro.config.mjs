@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config'
-import image from '@astrojs/image'
+import icon from 'astro-icon'
 // https://docs.astro.build/reference/configuration-reference
 // @ts-check
 // https://astro.build/config
@@ -12,10 +12,6 @@ export default defineConfig(
       },
     },
     site: 'https://philipschoenholzer.com/',
-    integrations: [
-      image({
-        serviceEntryPoint: '@astrojs/image/sharp',
-      }),
-    ],
+    integrations: [icon()],
   }
 )
