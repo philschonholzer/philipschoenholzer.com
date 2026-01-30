@@ -8,9 +8,15 @@ import Layout from '../layouts/Main.astro'
 <Layout title="Philip Schönholzer" description="Über Philip Schönholzer">
   <div class="container">
     <section class="hero">
-      <div>
+      <div class="copy">
         <h1>Philip Schönholzer</h1>
         <p>Stets auf der Suche...</p>
+
+      <p class="small">
+
+        Ich bin stets auf der Suche. Ich bin stets am Lernen. So hoffe ich, die Antworten zu finden. 
+      </p>
+      <p class="small">Besonders interessieren mich Organisation, Urbanismus, Geschichte, Technologie und die Frage, wie man ein erfülltes Leben lebt.</p>
       </div>
       <Picture
         src={avatar}
@@ -20,13 +26,6 @@ import Layout from '../layouts/Main.astro'
         width={150}
         height={150}
       />
-    </section>
-    <section class="copy-section">
-      <p>
-        Ich bin stets auf der Suche. Ich bin stets am Lernen. Dort hoffe ich die
-        Antworten zu finden. Mich interessieren besonders Geschichte,
-        Technologie, Minimalismus und Video-Games.
-      </p>
     </section>
     <section class="contact-section">
       <div class="contact-links">
@@ -68,7 +67,11 @@ import Layout from '../layouts/Main.astro'
     align-items: center;
     flex-wrap: wrap;
     padding-block: 3.5em;
-    gap: 1em;
+    gap: 2em;
+
+.copy {
+max-width: 30em;
+}
 
     h1 {
       font-size: 2em;
@@ -85,7 +88,10 @@ import Layout from '../layouts/Main.astro'
     ul {
       font-size: 1.5em;
       font-weight: 400;
-      margin-block: 0.5em 0;
+    }
+
+    .small {
+      font-size: 0.8em;
     }
 
     :global(picture) {
@@ -106,15 +112,6 @@ import Layout from '../layouts/Main.astro'
         width: 100%;
         height: auto;
       }
-    }
-  }
-
-  .copy-section {
-    font-size: 1.2em;
-    padding-top: 0;
-
-    @media (min-width: 640px) {
-      font-size: 1.6em;
     }
   }
 
