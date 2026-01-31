@@ -10,7 +10,7 @@ Personal website built with [Astro](https://astro.build) and deployed on a VPS.
 - **Testing**: Playwright
 - **Code Quality**: Biome (formatting & linting)
 - **Package Manager**: pnpm
-- **Deployment**: Netlify
+- **Deployment**: Infomaniak VPS
 
 ## Development
 
