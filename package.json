@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "preview:host": "astro preview --host",
     "test": "playwright test",
-    "test:ci": "playwright test",
+    "test:dev": "PLAYWRIGHT_DEV_SERVER=true playwright test",
+    "test:manual": "PLAYWRIGHT_SKIP_SERVER=true playwright test",
     "format": "biome check --write .",
     "lint": "biome lint .",
     "check": "biome check ."

@@ -32,8 +32,7 @@
             echo "pnpm version: $(pnpm --version)"
 
             # Set Playwright environment variables for NixOS compatibility
-            # Use the browsers from the current nix store
-            export PLAYWRIGHT_BROWSERS_PATH=${pkgs.playwright-driver.browsers}
+            export PLAYWRIGHT_BROWSERS_PATH="${pkgs.playwright-driver.browsers}"
             export PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true
           '';
         };
