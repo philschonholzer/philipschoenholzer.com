@@ -6,8 +6,14 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
       in
@@ -16,12 +22,19 @@
           buildInputs = with pkgs; [
             nodejs_22
             pnpm
+            biome
+            playwright-test
           ];
 
           shellHook = ''
             echo "philipschoenholzer.com development environment"
             echo "Node.js version: $(node --version)"
             echo "pnpm version: $(pnpm --version)"
+
+            # Set Playwright environment variables for NixOS compatibility
+            # Use the browsers from the current nix store
+            export PLAYWRIGHT_BROWSERS_PATH=${pkgs.playwright-driver.browsers}
+            export PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true
           '';
         };
       }

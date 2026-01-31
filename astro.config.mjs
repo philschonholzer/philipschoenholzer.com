@@ -13,5 +13,12 @@ export default defineConfig(
     },
     site: 'https://philipschoenholzer.com/',
     integrations: [icon()],
+    server: {
+      port: 4321,
+    },
+    preview: {
+      port: 4322,
+      host: true,
+    },
   },
 )
