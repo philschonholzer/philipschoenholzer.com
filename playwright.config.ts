@@ -101,9 +101,10 @@ const config: PlaywrightTestConfig = {
 /* Run your local server before starting the tests */
 if (!process.env.PLAYWRIGHT_SKIP_SERVER) {
   config.webServer = {
-    command: process.env.PLAYWRIGHT_DEV_SERVER === 'true' 
-      ? 'npm run dev' 
-      : 'npm run preview:host',
+    command:
+      process.env.PLAYWRIGHT_DEV_SERVER === 'true'
+        ? 'npm run dev'
+        : 'npm run preview:host',
     port: process.env.PLAYWRIGHT_DEV_SERVER === 'true' ? 4321 : 4322,
     timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI,
