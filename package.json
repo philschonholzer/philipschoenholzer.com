@@ -2,6 +2,7 @@
   "name": "philipschoenholzer.com",
   "version": "1.1.2",
   "private": true,
+  "packageManager": "pnpm@12.9.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro preview",
@@ -37,6 +38,6 @@
   },
   "devEngines": {
     "runtime": { "name": "node", "version": "24.21.0" },
-    "packageManager":{ "name": "pnpm", "version": "12.9.0" }
+    "packageManager": { "name": "pnpm", "version": "12.9.0" }
   }
 }
