@@ -34,5 +34,9 @@
   "dependencies": {
     "@astrojs/check": "^0.9.10",
     "typescript": "^7.0.2"
+  },
+  "devEngines": {
+    "runtime": { "name": "node", "version": "24.21.0" },
+    "packageManager":{ "name": "pnpm", "version": "12.9.0" }
   }
 }
